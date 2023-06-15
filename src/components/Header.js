@@ -37,10 +37,10 @@ const Header = () => {
           <MailTag tag='trash' Icon={TrashIcon} isActive={activeTag === 'trash'}/>
         </div>
         <div className='flex mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md 
-        rounded-full border border-gray-200 px-5 mb-2 items-center sm:max-w-xl lg:max-w-2xl'>
+        rounded-full border border-black px-5 mb-2 items-center sm:max-w-xl lg:max-w-2xl'>
           <input
             type="text"
-            className='bg-transparent text-black'
+            className='bg-transparent placeholder:text-black'
             value={searchTerm}
             placeholder="Search Here"
             onChange={(e) => setSearchTerm(e.target.value)}
