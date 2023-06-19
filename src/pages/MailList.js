@@ -19,11 +19,13 @@ const MailList = () => {
 
   useEffect(() => {
     dispatch(fetchMailsAsync());
+    console.log('selected')
   }, [dispatch]);
 
   useEffect(() => {
     const pathSegments = location.pathname.split('/');
     const tagFromPath = pathSegments[2];
+    console.log('selected') 
     dispatch(setTag(tagFromPath || 'inbox'));
   }, [location.pathname, dispatch]);
 
@@ -33,15 +35,18 @@ const MailList = () => {
   const filteredMails = mails.filter((mail) => {
     if (searchTerm) {
       // Filter mails by search term in all tags
+      console.log('selected')
       return (
         (mail.subject && mail.subject.toLowerCase().includes(searchTerm.toLowerCase())) ||
         (mail.body && mail.body.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     } else if (activeTag === 'all') {
       // Display all mails without search term
+      console.log('All')
       return true;
     } else {
       // Filter mails by active tag
+      console.log('Tag')
       return mail.tag === activeTag;
     }
   });
@@ -76,7 +81,7 @@ const MailList = () => {
   };
 
   return (
-    <div className='bg-gray-200 p-2 rounded-lg'>
+    <div className='m-2 bg-gray-200 p-2 rounded-lg'>
       {renderMailList()}
     </div>
   );
