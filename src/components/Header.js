@@ -24,8 +24,8 @@ const Header = () => {
   };
 
   return (
-    <>
-    <div className='sticky top-0 p-4 pb-0 bg-gradient-to-b from-pink-300 via-purple-300 to-indigo-400 flex flex-col w-full space-y-2'>
+    <div className='bg-gradient-to-b from-pink-300 via-purple-300 to-indigo-400 h-screen'>
+    <div className='sticky top-0 p-4 pb-0  flex flex-col w-full space-y-2'>
       <div className='flex justify-center'>
         <img className='h-20 aspect-auto' src='../logo.png' alt='Logo'/>
       </div>
@@ -52,7 +52,7 @@ const Header = () => {
       </div>
     </div>
     <Outlet />
-    </>
+    </div>
   );
 };
 

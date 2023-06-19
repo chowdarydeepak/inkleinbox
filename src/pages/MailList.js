@@ -81,8 +81,10 @@ const MailList = () => {
   };
 
   return (
-    <div className='m-2 bg-gray-200 p-2 rounded-lg'>
+    <div className='mt-2 h-[32rem] overflow-y-scroll'>
+      <div className='m-2 bg-gray-200 p-2 rounded-lg'>
       {renderMailList()}
+      </div>
     </div>
   );
 };
