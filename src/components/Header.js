@@ -24,7 +24,7 @@ const Header = () => {
   };
 
   return (
-    <div className='p-4 pb-0 bg-gradient-to-b from-pink-300 via-purple-300 to-indigo-400 flex flex-col w-full space-y-2'>
+    <div className='p-4 pb-0 bg-gradient-to-b from-pink-300 via-purple-300 to-indigo-100 flex flex-col w-full space-y-2'>
       <div className='flex justify-center'>
         <img className='h-20 aspect-auto' src='../logo.png' alt='Logo'/>
       </div>
@@ -37,7 +37,7 @@ const Header = () => {
           <MailTag tag='trash' Icon={TrashIcon} isActive={activeTag === 'trash'}/>
         </div>
         <div className='flex mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md 
-        rounded-full border border-black px-5 mb-2 items-center sm:max-w-xl lg:max-w-2xl'>
+        rounded-full border border-black px-5 mb-2 items-center'>
           <input
             type="text"
             className='bg-transparent placeholder:text-black'
